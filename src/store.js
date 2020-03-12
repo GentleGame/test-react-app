@@ -6,6 +6,6 @@ class Store{
 }
 
 const store = new Store();
-decorate (store, {})
+decorate(store, {})
 
 export default store;
