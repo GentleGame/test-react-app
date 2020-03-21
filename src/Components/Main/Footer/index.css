@@ -1,0 +1,45 @@
+footer {
+  background-color: #3e98e7;
+  height: 4rem;
+  margin-top: 50px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__team-name {
+  position: relative;
+}
+.footer__team-name::before {
+  content: '';
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 96%;
+  left: 0;
+  background-color: #fff;
+  animation: footer_left 4s ease-out 1s infinite;
+}
+.footer__team-name::after {
+  content: '';
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 97%;
+  left: 100%;
+  background-color: #fff;
+  animation: footer_anim 4s ease-out 1s infinite;
+  transform: rotate(-180deg);
+  transform-origin: 0px 0px;
+}
+@keyframes footer_anim {
+  0% {
+    width: 50%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
