@@ -7,17 +7,17 @@ import ura from './img/ura.png'
 
 export default function index() {
     return (
-        <Carousel>
+        <Carousel autoplay>
             <div className = "container_header">
                 <Row gutter = {120} justify = "center" >
-                    <Col >
+                    <Col>
                         <div className = "text_header">
-                                <p id = "header_1">
+                                <div id = "header_1">
                                     Добро пожаловать!
-                                </p>
-                                <p id = "header_2">
+                                </div>
+                                <div id = "header_2">
                                     Name - профессиональная биржа продвижения <span id = "tik_tok">TikTok</span>
-                                </p>
+                                </div>
                             </div>
                     </Col>
                     <Col >
