@@ -10,7 +10,7 @@ export class CardRegalia extends Component {
         return (
             <div className='card-regalia'>
                 <Row justify='center'><img src = {this.props.image}/></Row>
-                <Row>{this.props.text}</Row>
+                <Row style={{marginTop:"10px", fontFamily:"Roboto"}}>{this.props.text}</Row>
             </div>
         );
     }

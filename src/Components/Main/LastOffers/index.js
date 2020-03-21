@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card/index'
-import { Row,Col,Carousel } from 'antd'
+import { Row,Col,Carousel, Divider } from 'antd'
 import './index.css'
 import { observer } from 'mobx-react'
 
@@ -9,7 +9,7 @@ import { observer } from 'mobx-react'
     
     render(){return (
         <div className = "cards_page">
-            <h1 style = {{textAlign:'center'}}>Последние предложения</h1>
+            <Divider className='label-block'>Последние предложения</Divider>
         <Row justify = "space-between">
            <Card/>
            <Card/>

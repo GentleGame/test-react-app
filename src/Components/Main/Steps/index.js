@@ -29,12 +29,12 @@ export default class index extends Component {
     render() {
         return (
             <div className = "steps">
-                <Row >
+                <Row justify='center'>
                     <Col >
                 <Steps current={this.state.current} onChange={this.handlerChange} size = "large" >
-                    <Step title="Шаг 1" description="This is a description." />
-                    <Step title="Шаг 2" description="This is a description." />
-                    <Step title="Шаг 3" description="This is a description." />
+                    <Step title="Шаг 1" description="Выложи свой профиль на сайт" />
+                    <Step title="Шаг 2" description="Сделай рекламную интеграцию" />
+                    <Step title="Шаг 3" description="Получи заработанные деньги" />
                 </Steps>
                 </Col>
                 </Row>
