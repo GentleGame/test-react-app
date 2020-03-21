@@ -7,6 +7,7 @@ import Regalia from '../Regalia';
 import LastOffers from './LastOffers/index'
 
 import Navigation from './Navigation/index';
+import Footer from './Footer';
 
 export class Main extends Component {
 
@@ -16,16 +17,14 @@ export class Main extends Component {
     render() {
         return (
             <div>
-            <div className='container'>
                 <Navigation/>
-            </div>
                 <Header/>
                 <div className='container'>
-                <Steps/>
-                
+                    <Steps/>
                     <Regalia/>
                 </div>
                 <LastOffers store = {this.props.store}/>
+                <Footer/>
             </div>
 
         );
