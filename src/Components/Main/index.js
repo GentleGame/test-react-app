@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import Header from './Header/index'
 import Steps from './Steps/index'
+import LastOffers from './LastOffers/index'
 
 import Navigation from './Navigation/index';
 
@@ -12,8 +13,9 @@ export class Main extends Component {
             <div className='container'>
                 <Navigation/>
             </div>
-            <Header/>
+                <Header/>
                 <Steps/>
+                <LastOffers/>
             </div>
 
         );
