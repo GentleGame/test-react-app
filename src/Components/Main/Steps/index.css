@@ -1,6 +1,11 @@
 .steps{
     position:relative;
-    padding-top:5%;
+    padding-top:9%;
     height:300px;
-    font-size:100px;
+    max-width: 100vh;
+    transform:scale(1.5);
+    left:28%;
+}
+.ant-steps{
+    width:135%;
 }

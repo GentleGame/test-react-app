@@ -9,6 +9,17 @@ export default class index extends Component {
     constructor(props){
         super(props)
         this.state = {current:0}
+        
+    }
+
+    componentDidMount(){
+        setInterval(()=>{
+            if(this.state.current==3){
+                this.setState({current:0})
+            }else{
+                this.setState({current:this.state.current+1})
+            }
+        },2000)
     }
 
     handlerChange = (current)=>{
@@ -18,9 +29,9 @@ export default class index extends Component {
     render() {
         return (
             <div className = "steps">
-                <Row justify = "center">
-                    <Col>
-                <Steps current={this.state.current} onChange={this.handlerChange} size = "large">
+                <Row >
+                    <Col >
+                <Steps current={this.state.current} onChange={this.handlerChange} size = "large" >
                     <Step title="Шаг 1" description="This is a description." />
                     <Step title="Шаг 2" description="This is a description." />
                     <Step title="Шаг 3" description="This is a description." />
