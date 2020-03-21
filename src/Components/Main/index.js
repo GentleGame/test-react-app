@@ -20,8 +20,9 @@ export class Main extends Component {
                 <Navigation/>
             </div>
                 <Header/>
-                <Steps/>
                 <div className='container'>
+                <Steps/>
+                
                     <Regalia/>
                 </div>
                 <LastOffers store = {this.props.store}/>

@@ -14,10 +14,10 @@ export class Regalia extends Component {
     render() {
         return (
             <div className='block-regalia'> 
-                <Divider className='label-block'>Advantages</Divider>
+                <Divider className='label-block'>Преимущества</Divider>
                 <Row justify='space-between'>
                     <Col>
-                        <CardRegalia text='Вы нам не верите??' image={Book}/>
+                        <CardRegalia text='Удобное выкладывание собственного профиля с его полной статистикой и пожеланиями в рекламе' image={Book}/>
                     </Col>
                     <Col>
                         <CardRegalia text='Верните нам плиз 4к' image={Nota}/>
