@@ -20,10 +20,10 @@ export class Regalia extends Component {
                         <CardRegalia text='Удобное выкладывание собственного профиля с его полной статистикой и пожеланиями в рекламе' image={Book}/>
                     </Col>
                     <Col>
-                        <CardRegalia text='Верните нам плиз 4к' image={Nota}/>
+                        <CardRegalia text='Взаимовыгодные отношения для каждой из сторон, без посредников' image={Nota}/>
                     </Col>
                     <Col>
-                        <CardRegalia text='Ваня с тульского ИБАСа, есчо' image={Bank}/>
+                        <CardRegalia text='Быстрый и удобный поиск блоггером, которые будут продвигать ваши товары и услуги' image={Bank}/>
                     </Col>
                 </Row>
 
