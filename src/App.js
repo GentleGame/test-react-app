@@ -10,6 +10,10 @@ class App extends React.Component{
         
     }
 
+    componentDidMount(){
+        this.props.store.lastOffers.getData()
+    }
+
     render(){
         return <div>
                 <Main/>
