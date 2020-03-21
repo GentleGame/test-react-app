@@ -3,6 +3,7 @@ import './index.css';
 
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
+import logo from './images/logo.png';
 
 export class Navigation extends Component {
     render() {
@@ -10,10 +11,10 @@ export class Navigation extends Component {
             <nav>
                 <Row className='nav-block' justify='space-between' style={{padding: "0 15px"}}>
                     <Col span={2}>
-                        logo
+                        <img src={logo} style={{width: '60px'}}/>
                     </Col>
-                    <Col span={16}>
-                       <Row justify='space-between'>
+                    <Col span={20}>
+                       <Row justify='space-around'>
                         <Col span={12}>
                                 <Row justify='space-between'>
                                     <Col className='nav-block__col'>
