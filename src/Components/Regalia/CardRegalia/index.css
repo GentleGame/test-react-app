@@ -1,0 +1,15 @@
+.card-regalia {
+  padding: 30px 40px;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 4px;
+  background-color: #fbfbfb;
+  font-weight: 700;
+  transition: all 0.1s ease-in;
+}
+.card-regalia:hover {
+  background: linear-gradient(126.84deg, #4EFFF9, #77BFF8, #2DD0F2 101.5%);
+  box-shadow: 0 1.042vw 3.13vw #2DD0F2;
+  transform: scale(1.1);
+  color: #0c00ff;
+}

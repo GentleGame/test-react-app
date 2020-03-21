@@ -11,7 +11,7 @@ export class Navigation extends Component {
             <nav>
                 <Row className='nav-block' justify='space-between' style={{padding: "0 15px"}}>
                     <Col span={2}>
-                        <img src={logo} style={{width: '60px'}}/>
+                        <span className='tik-tok-logo'>B&D</span>
                     </Col>
                     <Col span={16}>
                        <Row justify='space-between'>

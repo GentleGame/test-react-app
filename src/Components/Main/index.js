@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import Header from './Header/index'
 import Steps from './Steps/index'
+import Regalia from '../Regalia';
 
 import Navigation from './Navigation/index';
 
@@ -14,6 +15,9 @@ export class Main extends Component {
             </div>
             <Header/>
                 <Steps/>
+                <div className='container'>
+                    <Regalia/>
+                </div>
             </div>
 
         );
