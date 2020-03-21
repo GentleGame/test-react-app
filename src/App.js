@@ -12,6 +12,7 @@ class App extends React.Component{
 
     componentDidMount(){
         this.props.store.lastOffers.getData()
+        this.props.store.topOffers.getData()
     }
 
     render(){

@@ -5,6 +5,7 @@ import Steps from './Steps/index'
 
 import Regalia from '../Regalia';
 import LastOffers from './LastOffers/index'
+import TopOffers from './topOffers/index'
 
 import Navigation from './Navigation/index';
 
@@ -26,6 +27,7 @@ export class Main extends Component {
                     <Regalia/>
                 </div>
                 <LastOffers store = {this.props.store}/>
+                <TopOffers store = {this.props.store}/>
             </div>
 
         );

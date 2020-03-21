@@ -3,6 +3,7 @@
 }
 .ant-card-meta-title{
     margin-bottom:10px;
+    font-weight: bold;
 }
 .ant-card-body{
     padding:20px;

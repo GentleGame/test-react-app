@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 
-import { Row, Col } from 'antd';
+import { Row, Col, Modal } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from './images/logo.png';
 
@@ -44,6 +44,11 @@ export class Navigation extends Component {
                        </Row>
                     </Col>
                 </Row>
+                <Modal 
+                
+                title="Авторизация">
+                    
+                </Modal>
             </nav>
         );
     }
