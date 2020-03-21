@@ -39,6 +39,5 @@ nav {
   background: linear-gradient(to right, #15EDED, #59C2FF, #5496FF, #FF63DE, #FF7C6E);
   text-decoration: underline;
   position: relative;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
