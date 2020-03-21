@@ -7,6 +7,10 @@ import Book from './images/book.png';
 import Bank from './images/bank.png';
 
 export class Regalia extends Component {
+
+    constructor(props){
+        super(props)
+    }
     render() {
         return (
             <div className='block-regalia'> 

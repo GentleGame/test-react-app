@@ -9,9 +9,8 @@ var lastOffers = {
         axios.get("http://atrokirina.beget.tech/api.php/lastreg?value=3",{headers:{
             'X-Access-Token' : '1234',
         }}).then(res=>{
-            if(res.status == 200){
-                this.data = res.response
-                console.log(this.data)
+            if(res.data.status == 200){
+                this.data = res.data.response
             }
         })
     }

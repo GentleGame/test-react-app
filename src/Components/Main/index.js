@@ -9,6 +9,10 @@ import LastOffers from './LastOffers/index'
 import Navigation from './Navigation/index';
 
 export class Main extends Component {
+
+    constructor(props){
+        super(props)
+    }
     render() {
         return (
             <div>
@@ -20,7 +24,7 @@ export class Main extends Component {
                 <div className='container'>
                     <Regalia/>
                 </div>
-                <LastOffers/>
+                <LastOffers store = {this.props.store}/>
             </div>
 
         );

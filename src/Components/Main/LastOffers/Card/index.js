@@ -1,18 +1,21 @@
 import React from 'react'
 import { Row, Col,Card, Avatar, Button } from 'antd'
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { EditOutlined, EllipsisOutlined, SettingOutlined, UserOutlined,EyeOutlined, LikeOutlined } from '@ant-design/icons';
+import './index.css'
 
 const { Meta } = Card;
 
 export default function index(props) {
     return (
         <Col >
-            <Card
+            <Card className = "pictures"
+
+            hoverable = {true}
     
     cover={
       <img
         alt="example"
-        src="http://atrokirina.beget.tech/images/5e75427355331.png"
+        src={props.image}
         style = {{width:"35vh"}}
       />
     }
@@ -21,9 +24,30 @@ export default function index(props) {
     ]}
   >
     <Meta
-      title="Card title"
-      description="This is the description"
+      title={props.name}
     />
+    <Row justify = "space-between" >
+      <Col >
+        <Meta
+        description={props.followers}
+        avatar = {<UserOutlined />}
+      />
+      </Col>
+      <Col  >
+      <Meta
+        avatar = {<EyeOutlined />}
+        description={props.views}
+      
+      />
+      </Col>
+      <Col >
+      <Meta
+        avatar = {<LikeOutlined />}
+        description={props.likes}
+      
+      />
+      </Col>
+    </Row>
   </Card>
 
         </Col>
