@@ -1,4 +1,5 @@
 import { observable, action, decorate,computed } from 'mobx';
+import TikTokAPI, { getRequestParams } from 'tiktok-api'
 import cookies from 'react-cookie';
 import axios from 'axios';
 

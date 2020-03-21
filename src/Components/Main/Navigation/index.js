@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
 import './index.css';
+import Registration from '../../Registration/index.js'
 
-import { Row, Col, Affix } from 'antd';
+import { Row, Col, Affix, Modal, Drawer} from 'antd';
 import { Link } from 'react-router-dom';
 import logo from './images/logo.png';
+import tiktok from './images/tiktok_logo.png'
 
 export class Navigation extends Component {
+
+    constructor(props){
+        super(props)
+        this.state = {visible:false}
+    }
+    handlerClick = ()=>{
+        this.setState({visible:true})
+    }
+    
+      onClose = e => {
+        console.log(e);
+        this.setState({
+          visible: false,
+        });
+      };
+
     render() {
         return (
             <Affix>
@@ -39,7 +57,7 @@ export class Navigation extends Component {
                                                 <Link><a className='nav-block__link create-offer-btn'>Создать заказ</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
-                                                <Link><a className='nav-block__link'>Вход</a></Link>
+                                                <Link onClick = {this.handlerClick}><a className='nav-block__link'>Вход</a></Link>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -47,6 +65,16 @@ export class Navigation extends Component {
                             </Col>
                         </Row>
                     </div>
+                    <Drawer 
+                    width = {350}
+                        title = "Регистрация"
+                        placement="right"
+                        closable={false}
+                            onClose={this.onClose}
+                            visible={this.state.visible}>
+                            <Registration/>
+
+                    </Drawer>
                 </nav>
             </Affix>
         );
