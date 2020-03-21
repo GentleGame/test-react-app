@@ -14,7 +14,7 @@ export class Navigation extends Component {
                         <img src={logo} style={{width: '60px'}}/>
                     </Col>
                     <Col span={20}>
-                       <Row justify='space-around'>
+                       <Row gutter='30' justify='end'>
                         <Col span={12}>
                                 <Row justify='space-between'>
                                     <Col className='nav-block__col'>
