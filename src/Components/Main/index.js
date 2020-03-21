@@ -18,8 +18,10 @@ export class Main extends Component {
     render() {
         return (
             <div>
-                <Navigation/>
-                <Header/>
+                <section style={{height:'auto'}}>
+                    <Navigation/>
+                    <Header/>
+                </section>
                 <div className='container'>
                     <Steps/>
                     <Regalia/>

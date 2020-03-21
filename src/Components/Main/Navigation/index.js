@@ -23,13 +23,10 @@ export class Navigation extends Component {
                                                 <Link><a className='nav-block__link'>Главная</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
-                                                <Link><a className='nav-block__link'>Заказы</a></Link>
+                                                <Link><a className='nav-block__link'>Предложения</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
                                                 <Link><a className='nav-block__link'>О нас</a></Link>
-                                            </Col>
-                                            <Col className='nav-block__col'>
-                                                <Link><a className='nav-block__link'>Кек</a></Link>
                                             </Col>
                                         </Row>
                                     </Col>

@@ -1,6 +1,6 @@
 .ant-carousel .slick-slide {
     text-align: center;
-    height: 90vh;
+    height: 100vh - 8rem;
     background:#3e98e7;
     overflow: hidden;
   }
@@ -11,21 +11,25 @@
   /* #6b4fc2 */
 .text_header{
     position:relative;
-    top:35vh;
     text-align:left;
     width:450px;
 }
 
+.slider__item, .slider__item-text-block{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 #ura{
     position:relative;
     width:100%;
-    top:100px;
 }
 
 #mile{
     position:relative;
     width:100%;
-    top:80px;
 }
 
 #tik_tok{
@@ -43,10 +47,6 @@
     width:700px;
 }
 
-.container_header{
-    position:relative;
-    left:5%;
-}
 
 #header_1{
     font-size:40px;
@@ -64,8 +64,4 @@
 #spacer{
     position:relative;
     width:600px;
-}
-
-#tik_tok{
-
 }
