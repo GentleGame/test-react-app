@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Idealist sans';
-  src: url(../../../fonts/IdealistSans.ttf) format('ttf');
+  src: url(../../../fonts/Idealist\ Sans.ttf) format('ttf');
 }
 nav {
   height: 80px;
   line-height: 80px;
   font-family: 'Idealist sans';
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 .nav-block__link {
@@ -21,13 +21,13 @@ nav {
   position: absolute;
   height: 2px;
   width: 100%;
-  top: 100%;
+  top: 98%;
   left: 0;
-  background-color: red;
+  background-color: #004B6E;
   transition: all 0.2s ease-in-out;
 }
 .nav-block__link:hover {
-  background: linear-gradient(to right, #15EDED, #59C2FF, #5496FF, #FF63DE, #FF7C6E);
+  background: linear-gradient(120deg, #15EDED, #59C2FF, #5496FF, #FF63DE, #FF7C6E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,7 +36,7 @@ nav {
   transition: all 0.2s ease-out;
 }
 .create-offer-btn {
-  background: linear-gradient(to right, #15EDED, #59C2FF, #5496FF, #FF63DE, #FF7C6E);
+  background: linear-gradient(120deg, #15EDED, #59C2FF, #5496FF, #FF63DE, #FF7C6E);
   text-decoration: underline;
   position: relative;
   -webkit-background-clip: text;
