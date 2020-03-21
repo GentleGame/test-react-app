@@ -1,19 +1,19 @@
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 90vh;
+  height: 92vh;
   background: #3e98e7;
   overflow: hidden;
 }
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-/* #6b4fc2 */
 .text_header {
   position: relative;
   top: 35vh;
   text-align: left;
   width: 450px;
 }
+/* #6b4fc2 */
 #ura {
   position: relative;
   width: 100%;
@@ -35,10 +35,6 @@
 }
 .img_header {
   width: 700px;
-}
-.container_header {
-  position: relative;
-  left: 5%;
 }
 #header_1 {
   font-size: 40px;

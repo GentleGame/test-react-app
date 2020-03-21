@@ -9,23 +9,23 @@ export default function index() {
     return (
         <Carousel autoplay>
             <div className = "container_header">
-            <Row gutter = {120} justify = "center" >
-                <Col >
-                   <div className = "text_header">
-                       <p id = "header_1">
-                           Добро пожаловать!
-                       </p>
-                       <p id = "header_2">
-                           Name - профессиональная биржа продвижения <span id = "tik_tok">TikTok</span>
-                       </p>
-                   </div>
-                </Col>
-                <Col >
-                <div className = "img_header">
-                <img id = "ura" src = {ura}/>
-                </div>
-                </Col>
-            </Row>
+                <Row gutter = {120} justify = "center" >
+                    <Col>
+                        <div className = "text_header">
+                                <div id = "header_1">
+                                    Добро пожаловать!
+                                </div>
+                                <div id = "header_2">
+                                    Name - профессиональная биржа продвижения <span id = "tik_tok">TikTok</span>
+                                </div>
+                            </div>
+                    </Col>
+                    <Col >
+                        <div className = "img_header">
+                            <img id = "ura" src = {ura}/>
+                        </div>
+                    </Col>
+                </Row>
             </div>
             <div className = "container_header">
             <Row gutter = {120} justify = "center" >
