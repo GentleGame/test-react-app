@@ -1,5 +1,5 @@
 import { observable, action, decorate,computed } from 'mobx';
-import cookies from 'react-cookie';
+import cookie from 'react-cookies'
 import axios from 'axios';
 import {notification} from 'antd'
 
@@ -63,10 +63,10 @@ var registration = {
         }
     },
     sendReq(){  // отправляем данные на сервер
-        this.disabled = true
         if((this.user.firstname!='')&&(this.user.lastname!='')&&(this.user.username!='')&&(this.user.email!='')&&(this.user.password!='')&&(this.user.c_password!='')){
             if(this.user.password == this.user.c_password){
-                axios.get(`http://atrokirina.beget.tech/api.php/createAccount?firstname=${this.user.firstname}&lastname=${this.user.lastname}&username=${this.user.username}&email=${this.user.email}&password=${this.user.password}`,{headers:{
+                this.disabled = true
+                axios.get(`http://atrokirina.beget.tech/api.php/createAccount?firstname=${this.user.firstname}&lastname=${this.user.lastname}&nickname=${this.user.username}&email=${this.user.email}&pwd=${this.user.password}`,{headers:{
                     'X-Access-Token' : '1234',
                 }}).then((res)=>{
                     if(res.status == 200){
@@ -124,6 +124,15 @@ var form = {
 }
 
 var authorization = {
+    authStatus:false,
+    disabled:false,
+    authorized:{
+        firstname:'',
+        lastname:'',
+        username:'',
+        date:'',
+        email:''
+    },
     email:'',
     password:'',
     setData(_obj) {
@@ -136,13 +145,76 @@ var authorization = {
             break;
         }
     },
+
+    setCookie(){
+        const expires = new Date()
+        expires.setDate(Date.now() + 60*30)
+        cookie.save("email",this.email,{
+            path:'/',
+            expires
+
+        })
+        cookie.save("password",this.password,{
+            path:'/',
+            expires
+
+        })
+    },
+    checkCookie(){
+       let c_email = cookie.load("email")
+       let c_pass = cookie.load("password")
+       if((typeof c_email != "undefined")&&(typeof c_pass != "undefined")){
+        axios.get(`http://atrokirina.beget.tech/api.php/auth?email=${c_email}&password=${c_pass}`,{headers:{
+            'X-Access-Token' : '1234'}}).then(res=>{
+                if(res.status == 200){
+                    this.authStatus = true 
+                    this.authorized.firstname = res.data.response.firstname 
+                    this.authorized.lastname = res.data.response.lastname
+                    this.authorized.username = res.data.response.nickname
+                    this.authorized.date = res.data.response.datareg
+                    this.authorized.email = res.data.response.email 
+                }
+                
+            })
+       }
+    },
     sendReq(){
         if((this.email!='')&&(this.password!='')){
+            this.disabled = true
             axios.get(`http://atrokirina.beget.tech/api.php/auth?email=${this.email}&password=${this.password}`,{headers:{
                 'X-Access-Token' : '1234'}}).then(res=>{
-
+                    if(res.status == 200){
+                        this.disabled = false
+                        notification["success"]({
+                            message: 'Успешно!',
+                            placement:'topLeft',
+                            description:
+                              'Вы авторизованы, можно зайти в аккаунт',
+                          });
+                          setTimeout(()=>{
+                            this.setCookie()
+                          },1000)
+                          setTimeout(()=>{
+                            this.checkCookie()
+                          },1000)
+                    }
                 }).catch(error=>{
-                    
+                    this.disabled = false
+                    if(error.response.status ==400){
+                        notification["error"]({
+                            message: 'Ошибка!',
+                            placement:'topLeft',
+                            description:
+                              'Неверный логин или пароль',
+                          });
+                        }else{
+                            notification["error"]({
+                                message: 'Ошибка!',
+                                placement:'topLeft',
+                                description:
+                                  'Что-то пошло не так, попробуйте позже',
+                              });
+                        }
                 })
         }
     }
@@ -180,6 +252,9 @@ decorate(store.form,{
    handlerReg:action
 })
 decorate(store.authorization,{
+    authStatus:observable,
+    disabled:observable,
+    authorized:observable,
     email:observable,
     password:observable,
     setData:action,
