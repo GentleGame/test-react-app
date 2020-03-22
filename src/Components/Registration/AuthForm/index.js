@@ -17,16 +17,20 @@ export default class index extends Component {
         this.props.store.authorization.setData(e.target)
     }
 
+    handlerClickAuth = ()=>{
+        this.props.store.authorization.sendReq()
+    }
+
     render() {
         return (
             <div className='form'>
                 <img className='main-logo' />
                 <Form name="normal_login" className="login-form" onChange = {this.handlerChange}>
                     <Form.Item name="e-mail" rules={[{ required: true, message: 'Введите email' }]}>
-                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="e-mail" />
+                        <Input name = "email" prefix={<UserOutlined className="site-form-item-icon" />} placeholder="e-mail" />
                     </Form.Item>
                     <Form.Item name="password" rules={[{ required: true, message: 'Введите пароль' }]}>
-                        <Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Пароль" />
+                        <Input name = "password" prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Пароль" />
                     </Form.Item>
                     <Form.Item>
                         <Form.Item name="remember" valuePropName="checked" noStyle>
@@ -36,7 +40,7 @@ export default class index extends Component {
                     </Form.Item>
 
                     <Form.Item className='login-form-btn-block'>
-                        <Button type="primary" htmlType="submit" className="login-form-button" block>
+                        <Button type="primary" onClick = {this.handlerClickAuth} className="login-form-button" block>
                             Войти
                         </Button>
                     </Form.Item>

@@ -13,10 +13,12 @@ import { Spin } from 'antd';
 
     render() {
         return (
+            <Spin tip = "Проверяем..." spinning = {this.props.store.authorization.disabled}>
             <Spin tip = "Отправляем..." spinning = {this.props.store.registration.disabled}>
             <div className = "forms">
                 {this.props.store.form.auth?<AuthForm store ={this.props.store}/>:<RegForm store ={this.props.store}/>}
             </div>
+            </Spin>
             </Spin>
             
         )

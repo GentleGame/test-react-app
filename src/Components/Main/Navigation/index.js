@@ -55,7 +55,10 @@ import { observer } from 'mobx-react';
                                                 <Link><a className='nav-block__link create-offer-btn'>Создать заказ</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
-                                                <Link onClick = {this.handlerClick}><a className='nav-block__link'>Вход</a></Link>
+                                                {this.props.store.authorization.authStatus?
+                                                <Link><a className='nav-block__link'>Аккаунт</a></Link>
+                                                :
+                                                <Link onClick = {this.handlerClick}><a className='nav-block__link'>Вход</a></Link>}
                                             </Col>
                                         </Row>
                                     </Col>
