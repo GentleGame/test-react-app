@@ -8,6 +8,7 @@ import logo from './images/logo.png';
 import tiktok from './images/tiktok_logo.png'
 import { observer } from 'mobx-react';
 
+
 @observer class Navigation extends Component {
 
     constructor(props){
@@ -56,7 +57,7 @@ import { observer } from 'mobx-react';
                                             </Col>
                                             <Col className='nav-block__col'>
                                                 {this.props.store.authorization.authStatus?
-                                                <Link><a className='nav-block__link'>Аккаунт</a></Link>
+                                                <Link to= "/myaccount"><a className='nav-block__link'>Аккаунт</a></Link>
                                                 :
                                                 <Link onClick = {this.handlerClick}><a className='nav-block__link'>Вход</a></Link>}
                                             </Col>
