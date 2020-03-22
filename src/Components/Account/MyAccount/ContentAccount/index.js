@@ -9,12 +9,17 @@ import {
     DesktopOutlined,
     ContainerOutlined,
     MailOutlined,
-    LeftOutlined
+    LeftOutlined,
+    SettingOutlined,
+    ProfileOutlined,
+    TeamOutlined,
+    BookOutlined
   } from '@ant-design/icons';
   import InfoAccount from './InfoAccount'
   import SettingsAccount from './SettingsAccount';
   import CreateAdAccount from './CreateAdAccount';
   import TikTokAccount from './TikTokAccount';
+  import CustomerAccount from './CustomerAccount';
 
   import {observer} from 'mobx-react'
   const { SubMenu } = Menu;
@@ -41,11 +46,13 @@ import {
           case '1':
             return <InfoAccount store={this.props.store}/>
           case '2':
-            return <TikTokAccount/>
+            return <TikTokAccount store={this.props.store}/>
           case '3':
-            return <CreateAdAccount/>
+            return <CreateAdAccount  store={this.props.store}/>
           case '4':
-            return <SettingsAccount/>
+            return <CustomerAccount store={this.props.store}/>
+          case '5':
+            return <SettingsAccount store={this.props.store}/>
           default:
             return <InfoAccount store={this.props.store}/>
         }
@@ -72,19 +79,23 @@ import {
           onSelect={this.menuHandler}
         >
           <Menu.Item key="1">
-            <PieChartOutlined />
+            <ProfileOutlined />
             <span>Информация об аккаунте</span>
           </Menu.Item>
           <Menu.Item key="2">
-            <DesktopOutlined />
+            <TeamOutlined />
             <span>Аккаунт в TikTok</span>
           </Menu.Item>
           <Menu.Item key="3">
-            <ContainerOutlined />
+            <BookOutlined />
             <span>Создание объявления</span>
           </Menu.Item>
           <Menu.Item key="4">
-            <ContainerOutlined />
+            <PieChartOutlined />
+            <span>Работа с заказчиками</span>
+          </Menu.Item>
+          <Menu.Item key="5">
+            <SettingOutlined />
             <span>Настройки</span>
           </Menu.Item>
           

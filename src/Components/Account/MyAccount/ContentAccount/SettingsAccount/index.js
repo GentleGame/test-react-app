@@ -9,6 +9,7 @@ class SettingsAccount extends Component {
         return (
             <div className='account-content__wrapper'>
                 <Divider orientation='left'>Настройки аккаунта</Divider>
+                
          </div>)
     }
 }

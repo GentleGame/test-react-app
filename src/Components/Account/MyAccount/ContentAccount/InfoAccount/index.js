@@ -79,6 +79,29 @@ import {observer} from 'mobx-react'
                                         {/* {{this.props.store.authorization.authorized}} */}
                                     </Row>
                            </Col>
+                           <Divider>Статистика</Divider>
+                           <Col span={12}>
+                                    <Row>
+                                       Количество созданных объявлений
+                                    </Row>
+                                    <Row>
+                                       Количество сообщений от заказчиков
+                                    </Row>
+                                    <Row>
+                                       Количество выполненных заказов
+                                    </Row>
+                                </Col>
+                           <Col span={12}>
+                                    <Row>
+                                       0
+                                    </Row>
+                                    <Row>
+                                       0
+                                    </Row>
+                                    <Row>
+                                    0
+                                    </Row>
+                           </Col>
                        </Row> 
                     </Col>
                 </Row>
