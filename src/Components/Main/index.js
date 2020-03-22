@@ -19,7 +19,7 @@ export class Main extends Component {
         return (
             <div>
                 <section style={{height:'auto'}}>
-                    <Navigation/>
+                    <Navigation store = {this.props.store}/>
                     <Header/>
                 </section>
                 <div className='container'>

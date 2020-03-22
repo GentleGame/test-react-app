@@ -6,8 +6,9 @@ import { Row, Col, Affix, Modal, Drawer} from 'antd';
 import { Link } from 'react-router-dom';
 import logo from './images/logo.png';
 import tiktok from './images/tiktok_logo.png'
+import { observer } from 'mobx-react';
 
-export class Navigation extends Component {
+@observer class Navigation extends Component {
 
     constructor(props){
         super(props)
@@ -63,13 +64,13 @@ export class Navigation extends Component {
                         </Row>
                     </div>
                     <Drawer 
-                    width = {350}
-                        title = "Регистрация"
+                    width = {310}
+                        title = {this.props.store.form.title}
                         placement="right"
                         closable={false}
                             onClose={this.onClose}
                             visible={this.state.visible}>
-                            <Registration/>
+                            <Registration store = {this.props.store}/>
 
                     </Drawer>
                 </nav>
