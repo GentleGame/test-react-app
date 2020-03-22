@@ -13,12 +13,18 @@ import {
   } from '@ant-design/icons';
   import InfoAccount from './InfoAccount'
 
+  import {observer} from 'mobx-react'
   const { SubMenu } = Menu;
 
-class MenuAccount extends Component {
+@observer class MenuAccount extends Component {
     constructor(props){
       super(props)
     }
+
+    componentWillMount(){
+      this.props.store.authorization.checkCookie()
+    }
+
     state = {
         collapsed: false,
         keyMenu: 1

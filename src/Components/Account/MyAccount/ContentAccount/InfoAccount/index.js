@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { Divider, Row, Col, Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import {observer} from 'mobx-react'
 
-class InfoAccount extends Component {
+@observer class InfoAccount extends Component {
     constructor(props){
         super(props);
     }
+
+    componentWillMount(){
+        this.props.store.authorization.checkCookie()
+      }
     render() {
         return (
             <div className='account-content__wrapper'>
