@@ -40,10 +40,10 @@ import { observer } from 'mobx-react';
                                 <Col span={12}>
                                         <Row justify='space-between'>
                                             <Col className='nav-block__col'>
-                                                <Link><a className='nav-block__link'>Главная</a></Link>
+                                                <Link to = "/main"><a className='nav-block__link'>Главная</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
-                                                <Link><a className='nav-block__link'>Предложения</a></Link>
+                                                <Link to = "/main/offer"><a className='nav-block__link'>Предложения</a></Link>
                                             </Col>
                                             <Col className='nav-block__col'>
                                                 <Link><a className='nav-block__link'>О нас</a></Link>

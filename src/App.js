@@ -6,6 +6,7 @@ import MyAccount from './Components/Account/MyAccount';
 
 import Navigation from './Components/Main/Navigation';
 import Footer from './Components/Main/Footer';
+import Offers from './Components/Offers/index.js'
 
 
 class App extends React.Component{
@@ -22,18 +23,33 @@ class App extends React.Component{
 
     render(){
         return <div>
-                <Route exact path='/'>
+            
+            <Route exact path='/'>
                     <Redirect to='/main'/>
                     <Navigation store = {this.props.store}/>
-                    <Route exact path='/main'><Main store = {this.props.store}/></Route>
+                    <Route exact path='/main'>
+                        <Main store = {this.props.store}/>
+                    </Route>
                     <Footer/>
-                </Route>
+            </Route>
+
+            <Route exact path='/main'>
+                <Navigation store = {this.props.store}/>
                 <Route exact path='/main'>
-                    <Navigation store = {this.props.store}/>
-                    <Route exact path='/main'><Main store = {this.props.store}/></Route>
-                    <Footer/>
+                <Main store = {this.props.store}/>
                 </Route>
-                <Route exact path='/myaccount'><MyAccount store = {this.props.store}/></Route>
+                <Footer/>
+            </Route>
+
+            <Route exact path='/main/offer'>
+                <Navigation store = {this.props.store}/>
+                    <Offers/>
+                <Footer/>
+            </Route>
+                    <Route exact path='/myaccount'>
+                        
+                        <MyAccount store = {this.props.store}/>
+            </Route>
         </div>
     }
 }

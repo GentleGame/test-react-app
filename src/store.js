@@ -131,7 +131,9 @@ var authorization = {
         lastname:'',
         username:'',
         date:'',
-        email:''
+        email:'',
+        currentIP:'',
+        regIP:''
     },
     email:'',
     password:'',
@@ -167,12 +169,19 @@ var authorization = {
         axios.get(`http://atrokirina.beget.tech/api.php/auth?email=${c_email}&password=${c_pass}`,{headers:{
             'X-Access-Token' : '1234'}}).then(res=>{
                 if(res.status == 200){
+                    let time = new Date(res.data.response.datareg*1000)
+                    let day = time.getDate()
+                    let month = time.getMonth() 
+                    let year = time.getFullYear() 
+                    let data = day+".0" + month +"."+ year
                     this.authStatus = true 
                     this.authorized.firstname = res.data.response.firstname 
                     this.authorized.lastname = res.data.response.lastname
                     this.authorized.username = res.data.response.nickname
-                    this.authorized.date = res.data.response.datareg
+                    this.authorized.date = data
                     this.authorized.email = res.data.response.email 
+                    this.authorized.currentIP = res.data.response.cip
+                    this.authorized.regIP = res.data.response.ipreg
                 }
                 
             })
