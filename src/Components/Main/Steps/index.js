@@ -32,9 +32,9 @@ export default class index extends Component {
                 <Row justify='center'>
                     <Col >
                 <Steps current={this.state.current} onChange={this.handlerChange} size = "large" >
-                    <Step title="Шаг 1" description="Выложи свой профиль на сайт" />
-                    <Step title="Шаг 2" description="Сделай рекламную интеграцию" />
-                    <Step title="Шаг 3" description="Получи заработанные деньги" />
+                    <Step title="Шаг 1" description="Пройди простую регистрацию" />
+                    <Step title="Шаг 2" description="Заполни и выложи своё предложение" />
+                    <Step title="Шаг 3" description="Получи средства от заказчиков" />
                 </Steps>
                 </Col>
                 </Row>

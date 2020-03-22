@@ -12,21 +12,15 @@ import {
     LeftOutlined
   } from '@ant-design/icons';
   import InfoAccount from './InfoAccount'
-  import SettingsAccount from './SettingsAccount';
-  import CreateAdAccount from './CreateAdAccount';
-  import TikTokAccount from './TikTokAccount';
 
   import {observer} from 'mobx-react'
   const { SubMenu } = Menu;
 
-@observer class MenuAccount extends Component {
+class MenuAccount extends Component {
     constructor(props){
       super(props)
     }
 
-    componentWillMount(){
-      this.props.store.authorization.checkCookie()
-    }
 
     state = {
         collapsed: false,
@@ -41,11 +35,11 @@ import {
           case '1':
             return <InfoAccount store={this.props.store}/>
           case '2':
-            return <TikTokAccount/>
+            return <div>Аккаунт</div>
           case '3':
-            return <CreateAdAccount/>
+            return <div>Объявление</div>
           case '4':
-            return <SettingsAccount/>
+            return <div>Настройки</div>
           default:
             return <InfoAccount store={this.props.store}/>
         }

@@ -17,13 +17,13 @@ export class Regalia extends Component {
                 <Divider className='label-block'>Преимущества</Divider>
                 <Row justify='space-between'>
                     <Col>
-                        <CardRegalia text='Удобное выкладывание собственного профиля с его полной статистикой и пожеланиями в рекламе' image={Book}/>
+                        <CardRegalia text='Удобное заполнение предложения со всей статистикой и информацией' image={Book}/>
                     </Col>
                     <Col>
                         <CardRegalia text='Взаимовыгодные отношения для каждой из сторон, без посредников' image={Nota}/>
                     </Col>
                     <Col>
-                        <CardRegalia text='Быстрый и удобный поиск блоггером, которые будут продвигать ваши товары и услуги' image={Bank}/>
+                        <CardRegalia text='Быстрый и удобный поиск блогеров, которые будут продвигать ваши товары и услуги' image={Bank}/>
                     </Col>
                 </Row>
 

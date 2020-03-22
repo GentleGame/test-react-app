@@ -73,10 +73,10 @@ import {observer} from 'mobx-react'
                                         {this.props.store.authorization.authorized.date}
                                     </Row>
                                     <Row>
-                                        {/* {{this.props.store.authorization.authorized}} */}
+                                        {this.props.store.authorization.authorized.currentIP}
                                     </Row>
                                     <Row>
-                                        {/* {{this.props.store.authorization.authorized}} */}
+                                        {this.props.store.authorization.authorized.regIP}
                                     </Row>
                            </Col>
                        </Row> 

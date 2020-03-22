@@ -1,0 +1,21 @@
+
+.cards_page {
+    position:relative;
+      margin: 0 auto;
+      width: 70vw;
+      padding:15px;
+      animation:anim 1s linear;
+    }
+  
+  h1{
+    margin-bottom:48px;
+  }
+    
+@keyframes anim{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
