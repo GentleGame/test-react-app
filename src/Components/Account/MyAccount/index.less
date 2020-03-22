@@ -1,0 +1,33 @@
+@el-bp: 1200px;
+@l-bp: 992px;
+@m-bp: 768px;
+@s-bp: 576px;
+@el-size: 1156px;
+@l-size: 960px;
+@m-size: 720px;
+@s-size: 540px;
+
+.container{
+    margin: 0 auto;
+    width: @el-size;
+}
+
+@media(max-width: @el-bp){
+    .container{
+        width: @l-size;
+    }
+}
+@media(max-width: @l-bp){
+    .container{
+        width: @m-size;
+    }
+}
+@media(max-width: @m-bp){
+    .container{
+        width: @s-size;
+        font-size: 12px;
+    }
+}
+.account-content__wrapper{
+    padding: 30px 0;
+}
