@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 import Main from './Components/Main';
 import MyAccount from './Components/Account/MyAccount';
@@ -21,10 +21,18 @@ class App extends React.Component{
 
     render(){
         return <div>
-                <Navigation/>
-                <Route exact path='/'><Main store = {this.props.store}/></Route>
-                <Route exact path='/myaccount' component={MyAccount}/>
-                <Footer/>
+                <Route exact path='/'>
+                    <Redirect to='/main'/>
+                    <Navigation store = {this.props.store}/>
+                    <Route exact path='/main'><Main store = {this.props.store}/></Route>
+                    <Footer/>
+                </Route>
+                <Route exact path='/main'>
+                    <Navigation store = {this.props.store}/>
+                    <Route exact path='/main'><Main store = {this.props.store}/></Route>
+                    <Footer/>
+                </Route>
+                <Route exact path='/myaccount'><MyAccount store = {this.props.store}/></Route>
         </div>
     }
 }
