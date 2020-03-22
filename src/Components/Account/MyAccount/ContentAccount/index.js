@@ -16,6 +16,9 @@ import {
   const { SubMenu } = Menu;
 
 class MenuAccount extends Component {
+    constructor(props){
+      super(props)
+    }
     state = {
         collapsed: false,
         keyMenu: 1
@@ -27,7 +30,7 @@ class MenuAccount extends Component {
       getItemComponent(key){
         switch(key){
           case '1':
-            return <InfoAccount/>
+            return <InfoAccount store={this.props.store}/>
           case '2':
             return <div>Аккаунт</div>
           case '3':
@@ -35,7 +38,7 @@ class MenuAccount extends Component {
           case '4':
             return <div>Настройки</div>
           default:
-            return <InfoAccount/>
+            return <InfoAccount store={this.props.store}/>
         }
       }
       toggleCollapsed = () => {
