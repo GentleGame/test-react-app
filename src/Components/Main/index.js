@@ -15,7 +15,14 @@ export class Main extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <Header/>
+=======
+                <section style={{height:'auto'}}>
+                    <Navigation store = {this.props.store}/>
+                    <Header/>
+                </section>
+>>>>>>> d14c732cc08c9517e23210029a27808a43145ee8
                 <div className='container'>
                     <Steps/>
                     <Regalia/>
