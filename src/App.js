@@ -2,6 +2,10 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Main from './Components/Main';
+import MyAccount from './Components/Account/MyAccount';
+
+import Navigation from './Components/Main/Navigation';
+import Footer from './Components/Main/Footer';
 
 
 class App extends React.Component{
@@ -17,8 +21,10 @@ class App extends React.Component{
 
     render(){
         return <div>
-                <Main store = {this.props.store}/>
-            
+                <Navigation/>
+                <Route exact path='/'><Main store = {this.props.store}/></Route>
+                <Route exact path='/myaccount' component={MyAccount}/>
+                <Footer/>
         </div>
     }
 }
