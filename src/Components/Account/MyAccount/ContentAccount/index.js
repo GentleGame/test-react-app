@@ -12,6 +12,9 @@ import {
     LeftOutlined
   } from '@ant-design/icons';
   import InfoAccount from './InfoAccount'
+  import SettingsAccount from './SettingsAccount';
+  import CreateAdAccount from './CreateAdAccount';
+  import TikTokAccount from './TikTokAccount';
 
   const { SubMenu } = Menu;
 
@@ -32,11 +35,11 @@ class MenuAccount extends Component {
           case '1':
             return <InfoAccount store={this.props.store}/>
           case '2':
-            return <div>Аккаунт</div>
+            return <TikTokAccount/>
           case '3':
-            return <div>Объявление</div>
+            return <CreateAdAccount/>
           case '4':
-            return <div>Настройки</div>
+            return <SettingsAccount/>
           default:
             return <InfoAccount store={this.props.store}/>
         }

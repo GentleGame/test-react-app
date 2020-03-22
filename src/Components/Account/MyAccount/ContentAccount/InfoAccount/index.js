@@ -54,14 +54,25 @@ class InfoAccount extends Component {
                                 <Divider>Техническая информация</Divider>
                                 <Col span={12}>
                                     <Row>
-                                        {this.props.store.authorization.authorized.date}
+                                       Дата регистрации
                                     </Row>
                                     <Row>
-                                        {/* {this.props.store.authorization.authorized} */}
+                                       IP при регистрации
+                                    </Row>
+                                    <Row>
+                                       IP текуший
                                     </Row>
                                 </Col>
                            <Col span={12}>
-                               
+                                    <Row>
+                                        {this.props.store.authorization.authorized.date}
+                                    </Row>
+                                    <Row>
+                                        {/* {{this.props.store.authorization.authorized}} */}
+                                    </Row>
+                                    <Row>
+                                        {/* {{this.props.store.authorization.authorized}} */}
+                                    </Row>
                            </Col>
                        </Row> 
                     </Col>
