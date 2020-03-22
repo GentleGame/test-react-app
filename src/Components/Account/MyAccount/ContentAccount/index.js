@@ -16,13 +16,10 @@ import {
     BookOutlined
   } from '@ant-design/icons';
   import InfoAccount from './InfoAccount'
-<<<<<<< HEAD
   import SettingsAccount from './SettingsAccount';
   import CreateAdAccount from './CreateAdAccount';
   import TikTokAccount from './TikTokAccount';
   import CustomerAccount from './CustomerAccount';
-=======
->>>>>>> 8977abd832094b443e8a3294f653bd58695fa0a6
 
   import {observer} from 'mobx-react'
   const { SubMenu } = Menu;
@@ -46,7 +43,6 @@ class MenuAccount extends Component {
           case '1':
             return <InfoAccount store={this.props.store}/>
           case '2':
-<<<<<<< HEAD
             return <TikTokAccount store={this.props.store}/>
           case '3':
             return <CreateAdAccount  store={this.props.store}/>
@@ -54,13 +50,6 @@ class MenuAccount extends Component {
             return <CustomerAccount store={this.props.store}/>
           case '5':
             return <SettingsAccount store={this.props.store}/>
-=======
-            return <div>Аккаунт</div>
-          case '3':
-            return <div>Объявление</div>
-          case '4':
-            return <div>Настройки</div>
->>>>>>> 8977abd832094b443e8a3294f653bd58695fa0a6
           default:
             return <InfoAccount store={this.props.store}/>
         }
